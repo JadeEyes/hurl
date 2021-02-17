@@ -80,11 +80,13 @@ fn parse(app: &App, s: &str) -> Result<Url, url::ParseError> {
     } else {
         match Url::parse(s) {
             Ok(url) => Ok(url),
-            Err(_e) => if app.secure {
-                Url::parse(&format!("https://{}", s))
-            } else {
-                Url::parse(&format!("http://{}", s))
-            },
+            Err(_e) => {
+                if app.secure {
+                    Url::parse(&format!("https://{}", s))
+                } else {
+                    Url::parse(&format!("http://{}", s))
+                }
+            }
         }
     }
 }
