@@ -18,5 +18,11 @@ pub fn build() -> HurlResult<(SyntaxSet, ThemeSet)> {
     let mut builder = SyntaxSetBuilder::new();
     load_syntax_def!(builder, "../assets/HTTP.sublime-syntax");
     load_syntax_def!(builder, "../sublime/JSON/JSON.sublime-syntax");
+    load_syntax_def!(builder, "../sublime/JavaScript/JavaScript.sublime-syntax");
+    load_syntax_def!(builder, "../sublime/HTML/HTML.sublime-syntax");
+    load_syntax_def!(builder, "../sublime/CSS/CSS.sublime-syntax");
+    load_syntax_def!(builder, "../sublime/Markdown/Markdown.sublime-syntax");
+    load_syntax_def!(builder, "../sublime/JSON/JSON.sublime-syntax");
+    load_syntax_def!(builder, "../sublime/YAML/YAML.sublime-syntax");
     Ok((builder.build(), ThemeSet::load_defaults()))
 }
