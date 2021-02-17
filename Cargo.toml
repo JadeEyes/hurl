@@ -1,0 +1,23 @@
+[package]
+name = "hurl"
+version = "0.1.0"
+authors = ["Luyu Cheng <chengluyu@live.cn>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+structopt = "0.3.21"                  # Parse command line argument by defining a struct.
+heck = "0.3.2"                  # heck is a case conversion library.
+log = "0.4.14"                # A lightweight logging facade for Rust 
+pretty_env_logger = "0.4.0"        # a visually pretty env_logger
+serde = { version = "1.0.123", features = ["derive"] }                              # A generic serialization/deserialization framework
+serde_json = "1.0.61"                     # A JSON serialization file format
+reqwest = { version = "0.11.0", features = ["cookies", "json", "multipart"] }                                # higher level HTTP client library
+rpassword = "5.0.1"         # Read passwords in console applications.
+url = "2.2.0"              # URL library for Rust, based on the WHATWG URL Standard
+dirs = "3.0.1"                    # A tiny low-level library that provides platform-specific standard locations of directories fo…
+lazy_static = "1.4.0"            # A macro for declaring lazily evaluated statics in Rust.
+toml = "0.5.8"                # A native Rust encoder and decoder of TOML-formatted files and streams. Provides implementations o…
+tokio = { version = "1.2.0", features = ["rt", "macros"] }                 # An event-driven, non-blocking I/O platform for writing asynchronous I/O backed applications. 
+syntect = "4.5.0"          # library for high quality syntax highlighting and code intelligence using Sublime Text's grammars
